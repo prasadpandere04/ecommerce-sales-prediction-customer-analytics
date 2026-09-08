@@ -1,61 +1,39 @@
-# 🛒 E-Commerce Sales Prediction & Customer Analytics
+# E-Commerce Sales Prediction & Customer Analytics
 
-An end-to-end Data Science and Data Analytics project that analyzes e-commerce transactions, predicts future sales, segments customers, identifies at-risk customers, and presents business insights through an interactive Power BI dashboard.
+Complete end-to-end Data Science + Data Analytics project.
 
----
+## Stack
+- MySQL: data storage and SQL analysis
+- Python/Pandas: cleaning and EDA
+- Scikit-learn: sales forecasting, customer segmentation, churn-risk model
+- Power BI: dashboard layer
+- Streamlit: optional interactive application
 
-## 📌 Project Overview
+## Dataset
+Synthetic Indian e-commerce data is included in `data/`:
+- customers.csv
+- products.csv
+- orders.csv
 
-The objective of this project is to build an end-to-end e-commerce analytics solution using SQL, Python, Machine Learning, Customer Segmentation, and Power BI.
+## Run
+1. Create a virtual environment.
+2. Install packages:
+   `pip install -r requirements.txt`
+3. Run the ML/analytics pipeline:
+   `python src/pipeline.py`
+4. Start the optional app:
+   `streamlit run app.py`
 
-The project focuses on:
+## SQL
+Import `sql/schema.sql`, then load CSV data into the three tables. Use `sql/analysis_queries.sql` for analysis.
 
-- Sales and revenue analysis
-- Customer behavior analysis
-- Product performance analysis
-- Future sales prediction
-- RFM-based customer segmentation
-- Customer churn-risk identification
-- Interactive business dashboard
+## Power BI
+Import `data/orders.csv`, `data/customers.csv`, `data/products.csv`, and `reports/customer_analytics.csv`.
+Recommended pages:
+1. Executive Sales
+2. Customer Analytics
+3. Product Analytics
+4. Sales Prediction
 
----
-
-## 🎯 Objectives
-
-1. Analyze e-commerce sales and customer transaction data.
-2. Store and query structured data using MySQL.
-3. Clean and preprocess data using Python.
-4. Perform Exploratory Data Analysis (EDA).
-5. Predict future monthly sales using Machine Learning.
-6. Segment customers using RFM Analysis and K-Means Clustering.
-7. Identify customers who may be at risk of becoming inactive.
-8. Build an interactive Power BI dashboard.
-9. Generate business insights for better decision-making.
-
----
-
-## 🏗️ Project Architecture
-
-```text
-E-Commerce Dataset
-        ↓
-      MySQL
-        ↓
-    SQL Queries
-        ↓
- Python / Pandas
-        ↓
-Data Cleaning + EDA
-        ↓
- Feature Engineering
-        ↓
- Machine Learning
-   ↓             ↓
-Sales         Customer
-Prediction    Analytics
-                  ↓
-          RFM + K-Means
-                  ↓
-              Power BI
-                  ↓
-        Business Insights
+## Important
+The included dataset is synthetic and intended for academic/demo use. Replace it with real business data for production use.
